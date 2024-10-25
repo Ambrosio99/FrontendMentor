@@ -1,0 +1,110 @@
+body {
+  background: linear-gradient(273deg, rgb(12, 13, 16) 0%, rgb(30, 33, 37) 50%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.main-container {
+  background: rgb(48, 61, 77);
+  background: linear-gradient(0deg, rgb(43, 54, 68) 0%, rgb(35, 43, 57) 50%);
+  place-self: center;
+  max-height: max-content;
+  padding: 2rem;
+  max-width: 370px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  display: grid;
+  justify-items: center;
+
+  & .img-icon {
+    background-color: rgba(83, 83, 86, 0.204);
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    place-self: start;
+  }
+  & h2 {
+    place-self: start;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    margin: 1rem 0;
+  }
+  & p {
+    font-size: 1rem;
+    font-family: 500;
+    color: rgb(141, 141, 141);
+    line-height: 1.5rem;
+  }
+}
+
+.notes-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0;
+  gap: 1rem;
+  & li {
+    background-color: rgba(83, 83, 86, 0.204);
+    padding: 1.2rem 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #fc7614;
+      color: black;
+    }
+  }
+}
+
+.btn-submit {
+  background-color: white;
+  background-color: #fc7614;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.selected {
+  color: black;
+  background-color: white !important;
+}
+.span-info {
+  color: #fc7614;
+  font-weight: 400;
+  background-color: rgba(83, 83, 86, 0.204);
+  padding: 0.75rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 2.2rem 0;
+}
+
+@media (max-width: 450px) {
+  .notes-list li {
+    padding: 1rem 1.25rem;
+  }
+  img,
+  h2,
+  p,
+  ul,
+  button {
+    margin: 0.5rem !important;
+  }
+}
